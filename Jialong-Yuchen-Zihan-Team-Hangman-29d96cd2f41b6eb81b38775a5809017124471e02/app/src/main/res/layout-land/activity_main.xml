@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="5"
+        android:orientation="vertical"
+        android:paddingEnd="8dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="wordDisplay" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CHOOSE A LETTER"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:paddingBottom="8dp"/>
+
+        <androidx.gridlayout.widget.GridLayout
+            android:id="@+id/letterButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            app:columnCount="7"
+            app:rowCount="4" />
+
+        <TextView
+            android:id="@+id/hintTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:paddingTop="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:textColor="@android:color/black"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="10dp"
+        android:layout_height="365dp"
+        android:layout_weight="4"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/hangmanView"
+            android:layout_width="210dp"
+            android:layout_height="395dp"
+            android:src="@drawable/hangman0" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="3"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:paddingStart="3dp">
+
+        <TextView
+            android:id="@+id/wordTextView"
+            android:layout_width="156dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textSize="28sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="8dp">
+
+            <Button
+                android:id="@+id/newGameButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:text="New Game" />
+
+            <Button
+                android:id="@+id/hintButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hint"
+                android:layout_margin="8dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
